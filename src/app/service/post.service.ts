@@ -40,4 +40,12 @@ export class PostService {
     return this.http.get(url);
   }
 
+  upvote(post: Post){
+    const url = `${this.postsUrl}/${post.id}`;
+    post.rating += 1;
+    return this.http.put(url, post).subscribe(data => {
+      console.log(data)
+    });
+  }
+
 }
