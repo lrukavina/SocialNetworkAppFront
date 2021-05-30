@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Post} from "../service/post";
 import {PostService} from "../service/post.service";
-
+import { CommonModule } from "@angular/common";
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
+
 
   posts: Post[];
 

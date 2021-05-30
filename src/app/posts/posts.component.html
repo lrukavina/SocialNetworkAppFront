@@ -3,7 +3,7 @@
 <div class="content">
   <div class="posts" *ngFor="let post of posts">
     <h3>{{post.title}}</h3>
-    <img alt="Post image" width="100%" height="auto" src="{{post.imageUrl}}">
+    <img *ngIf="post.imageUrl.length > 0" alt="Post image" width="100%" height="auto" src="{{post.imageUrl}}">
     <p>{{post.text}}</p>
     <button (click)="upvote(post)">⬆</button><span><b>{{post.rating}}</b></span><button>⬇</button>
   </div>
