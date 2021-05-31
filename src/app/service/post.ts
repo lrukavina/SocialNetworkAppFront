@@ -4,4 +4,5 @@ export interface Post{
   imageUrl: string;
   text: string;
   rating: number;
+  author: string;
 }

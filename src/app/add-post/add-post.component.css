@@ -1,19 +1,4 @@
-p, h2, h3, h5{
-  font-family: Verdana;
-}
-
-h3{
-  font-size: larger;
-}
-
-h5{
-  line-height: 0px;
-  font-weight: normal;
-  color: #5885AF;
-  margin-top: -5px;
-}
-
-.posts{
+.addPost{
   width: 100%;
   border: 1px solid #5885AF;
   padding: 42px 42px;
@@ -22,7 +7,11 @@ h5{
   background-color: #FAFAFA;
 }
 
-.posts button{
+h3, form, button{
+  font-family: Verdana;
+}
+
+.addPost button{
   padding: 8px 16px;
   border: 0.2px solid black;
   border-radius: 5px;
@@ -30,20 +19,10 @@ h5{
   margin-right: 10px;
 }
 
-.posts button:hover{
+.addPost button:hover{
   background-color: #5885AF;
   color: white;
   transition: 0.3s;
-}
-.posts span{
-  font-size: larger;
-  color: #41729F;
-  font-family: Arial, sans-serif;
-  margin-right: 10px;
-}
-
-h2,h3{
-  color: #41729F;
 }
 
 .content {

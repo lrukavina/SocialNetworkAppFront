@@ -1,0 +1,32 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="content">
+  <div class="addPost">
+    <h3>New post:</h3>
+    <br>
+    <form>
+      <div>
+        <label>Title:
+          <div>
+            <input #title />
+          </div>
+          <br>
+        </label>
+        <label>Text:
+          <div>
+            <textarea rows="5" cols="30" #text></textarea>
+          </div>
+        </label>
+        <br>
+        <label>Author:
+          <div>
+            <input #author>
+          </div>
+        </label>
+      </div>
+      <br><br>
+
+      <button (click)="addNewPost(title.value, '', text.value,0, author.value)">Add new post</button>
+    </form>
+  </div>
+</div>

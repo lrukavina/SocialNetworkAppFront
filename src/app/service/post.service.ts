@@ -40,11 +40,26 @@ export class PostService {
     return this.http.get(url);
   }
 
+  addNewPost(post: Post): Observable<Post>{
+    return this.http.post<Post>(this.postsUrl, post, this.httpOptions).pipe(
+      tap((newPost: Post) => console.log(`Added new post: ${newPost.title}`)),
+      catchError(this.handleError<Post>('addPost'))
+    );
+  }
+
   upvote(post: Post){
     const url = `${this.postsUrl}/${post.id}`;
     post.rating += 1;
     return this.http.put(url, post).subscribe(data => {
-      console.log(data)
+      console.log('Post upvoted ' + data)
+    });
+  }
+
+  downvote(post: Post){
+    const url = `${this.postsUrl}/${post.id}`;
+    post.rating -= 1;
+    return this.http.put(url, post).subscribe(data => {
+      console.log('Post downvoted' + data)
     });
   }
 

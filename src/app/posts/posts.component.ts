@@ -29,5 +29,9 @@ export class PostsComponent implements OnInit {
     this.postsService.upvote(post);
   }
 
+  downvote(post: Post): void{
+    this.postsService.downvote(post);
+  }
+
   //TODO: check image upload: https://www.remotestack.io/angular-image-upload-and-preview-tutorial-example/
 }
