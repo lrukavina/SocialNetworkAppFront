@@ -1,0 +1,8 @@
+<div>
+  <p *ngIf="comments.length < 1"><b>No comments</b></p>
+  <div class="comments" *ngFor="let comment of comments">
+    <h5>{{comment.author}}:</h5>
+    <p>{{comment.content}}</p>
+    <br>
+  </div>
+</div>

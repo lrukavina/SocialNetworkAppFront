@@ -8,9 +8,10 @@
     <p>{{post.text}}</p>
     <br>
     <button (click)="upvote(post)">⬆</button><span><b>{{post.rating}}</b></span><button (click)="downvote(post)">⬇</button>
+    <a routerLink="/comments/{{post.id}}" class="comments">Comments</a>
   </div>
 </div>
-n
+
 
 
 

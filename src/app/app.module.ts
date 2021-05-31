@@ -9,20 +9,24 @@ import {CommonModule} from '@angular/common';
 import { AppRoutingModule, routes } from './app-routing.module';
 import { AddPostComponent } from './add-post/add-post.component';
 import {RouterModule} from "@angular/router";
+import {FormsModule} from "@angular/forms";
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     PostsDetailsComponent,
-    AddPostComponent
+    AddPostComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   exports: [
     RouterModule

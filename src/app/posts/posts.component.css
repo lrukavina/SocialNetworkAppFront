@@ -1,4 +1,4 @@
-p, h2, h3, h5{
+p, h2, h3, h5, a{
   font-family: Verdana;
 }
 
@@ -44,6 +44,20 @@ h5{
 
 h2,h3{
   color: #41729F;
+}
+
+.comments{
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  color: #3e6f9d;
+}
+
+.comments:hover{
+  transition: 0.3s;
+  color: #508ec8;
 }
 
 .content {

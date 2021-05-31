@@ -10,11 +10,17 @@ import {PostsComponent} from "../posts/posts.component";
 })
 export class AddPostComponent implements OnInit {
 
+  selectedFile: File;
+
   constructor(
     private postService: PostService,
   ) { }
 
   ngOnInit(): void {
+  }
+
+  public onFileChanged(event): void{
+    this.selectedFile = event.target.files[0];
   }
 
    addNewPost(title: string, imageUrl: string, text: string, rating: number, author: string): void{
@@ -29,5 +35,6 @@ export class AddPostComponent implements OnInit {
     }
     this.postService.addNewPost({title, imageUrl, text, rating, author} as Post)
       .subscribe(data => data);
+     window.location.reload();
   }
 }
