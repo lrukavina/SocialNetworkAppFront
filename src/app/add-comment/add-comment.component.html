@@ -1,0 +1,19 @@
+<br>
+<h3>Write a comment:</h3>
+<form #form>
+  <div>
+    <label>Author:
+      <div>
+        <input #author />
+      </div>
+      <br>
+    </label>
+    <label>Comment:
+      <div>
+        <textarea rows="5" cols="30" #text></textarea>
+      </div>
+    </label>
+  </div>
+  <br>
+  <button (click)="addNewComment(author.value, text.value, 0); form.reset()">Write comment</button>
+</form>

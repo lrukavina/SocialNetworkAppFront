@@ -19,3 +19,7 @@ button:hover{
   background-color: #508ec8;
   color: white;
 }
+
+.fixed{
+  position: fixed;
+}

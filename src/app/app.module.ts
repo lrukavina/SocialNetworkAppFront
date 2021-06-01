@@ -11,6 +11,7 @@ import { AddPostComponent } from './add-post/add-post.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { CommentsComponent } from './comments/comments.component';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CommentsComponent } from './comments/comments.component';
     PostsComponent,
     PostsDetailsComponent,
     AddPostComponent,
-    CommentsComponent
+    CommentsComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,7 @@ import { CommentsComponent } from './comments/comments.component';
   exports: [
     RouterModule
   ],
-  providers: [],
+  providers: [PostsComponent, CommentsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

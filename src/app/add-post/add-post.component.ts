@@ -13,7 +13,7 @@ export class AddPostComponent implements OnInit {
   selectedFile: File;
 
   constructor(
-    private postService: PostService,
+    private postService: PostService
   ) { }
 
   ngOnInit(): void {

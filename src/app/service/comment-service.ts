@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable, of} from "rxjs";
+import {Post} from "./post";
+import {catchError, tap} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -29,5 +31,12 @@ export class CommentService {
   getByPostId(id: string): Observable<any>{
     const url = `${this.commentsUrl}/${id}`;
     return this.http.get(url);
+  }
+
+  addNewComment(comment: Comment): Observable<Comment>{
+    return this.http.post<Comment>(this.commentsUrl, comment, this.httpOptions).pipe(
+      tap((newComment: Comment) => console.log(`Added new comment by: ${newComment}`)),
+      catchError(this.handleError<Comment>('addComment'))
+    );
   }
 }
